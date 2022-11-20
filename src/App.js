@@ -8,7 +8,8 @@ import SingUp from "./pages/SingUp/SingUp.js";
 
 function App() {
   return (
-    <GlobalStyle >
+    <>
+      <GlobalStyle />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<SingIn />} />
@@ -18,7 +19,7 @@ function App() {
           <Route path="outflow" element={<Outflow />} />
         </Routes>
       </BrowserRouter>
-    </GlobalStyle>
+    </>
   );
 }
 
