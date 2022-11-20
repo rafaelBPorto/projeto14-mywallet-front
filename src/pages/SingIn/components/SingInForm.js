@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import StyledForm from "../../../assets/styles/StyleForm";
 import { BASEURL } from "../../../Constants/URLS";
 
@@ -46,6 +46,8 @@ export default function SingInForm() {
             />
 
             <button type="submit">Entrar</button>
+
+            <Link to={"/sing-up"}> Não possuí uma conta? Cadastre-se</Link>
         </StyledForm>
     )
 }
