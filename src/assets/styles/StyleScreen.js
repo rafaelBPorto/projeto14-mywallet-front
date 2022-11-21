@@ -26,7 +26,7 @@ export const StyleScreen = styled.div`
         text-align:center;
         text-decoration:none;
         font-family: 'Raleway';
-        font-weight: 400;
+        font-weight: 700;
         color:#FFFFFF;
     }
 `
