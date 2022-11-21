@@ -12,5 +12,9 @@ const StyleRegistries = styled.div`
     height: 65vh;
     margin-top: 72px;
     gap:5px;
+
+    overflow-y: scroll
+
+
 `
 export default StyleRegistries;
