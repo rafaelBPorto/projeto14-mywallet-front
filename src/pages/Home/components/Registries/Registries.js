@@ -35,7 +35,7 @@ export default function Registries() {
             {registries.map((r, index) =>
                 <Extract key={index}>
                     <span> <StyleDate>{r.date}</StyleDate> {r.description} </span>
-                    <StyleType type={r.type==="outflow"? "#C70000" : "#03AC00"}>{Math.abs(r.value)}</StyleType>
+                    <StyleType type={r.type==="outflow"? "#C70000" : "#03AC00"}>R$ {Math.abs(r.value)}</StyleType>
                 </Extract>
             )
         }
@@ -53,6 +53,7 @@ const Extract = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    margin-top:5px;
     p{
         
     flex-direction:column;
