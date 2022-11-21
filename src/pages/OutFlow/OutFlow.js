@@ -1,5 +1,13 @@
-export default function Outflow(){
+import { StyleScreen } from "../../assets/styles/StyleScreen";
+import FormOutflow from "./Components/FormOutFlow";
+import Hearder from "../../components/Header";
+
+export default function OutFlow() {
     return (
-        <div>Outflow</div>
+        <StyleScreen>
+            <Hearder typeRegistrie={"Nova saída"}/>
+            <FormOutflow />
+        </StyleScreen>
+
     )
 }

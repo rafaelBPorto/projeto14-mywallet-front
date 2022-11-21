@@ -4,7 +4,7 @@ export default function Header(){
     return(
         <StyleHeader>
             <h2>Nome</h2>
-            <h2>Sair</h2>
+            <h2>Logout</h2>
         </StyleHeader>
     )
 }
