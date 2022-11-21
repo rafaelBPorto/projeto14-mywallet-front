@@ -14,6 +14,7 @@ export default function FormInflow() {
 
     async function handleForm(e) {
         e.preventDefault();
+        const token = localStorage.getItem("token");
 
         try {
             const res = await axios.post(`${BASEURL}/registries`, {
@@ -21,6 +22,8 @@ export default function FormInflow() {
                 description: descripton,
                 type: "inflow",
                 date: dayjs().format("DD/MM/YYYY")
+            },{
+                headers: {"authorization": `Bearer ${token}`}
             });
             navigate("/home")
 
