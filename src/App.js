@@ -15,8 +15,8 @@ function App() {
           <Route path="/" element={<SingIn />} />
           <Route path="/sing-up" element={<SingUp />} />
           <Route path="/home" element={<Home />} />
-          <Route path="inflow" element={<Inflow />} />
-          <Route path="outflow" element={<Outflow />} />
+          <Route path="/inflow" element={<Inflow />} />
+          <Route path="/outflow" element={<Outflow />} />
         </Routes>
       </BrowserRouter>
     </>
