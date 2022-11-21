@@ -12,7 +12,13 @@ const StyleHeader = styled.div`
     
     position: fixed;
     top: 0;
-    left: 0;    
+    left: 0;
+    button{
+
+        background:none;
+        border: none;
+        color: #ffffff;
+    }
 `
 
 export default StyleHeader; 

@@ -3,7 +3,6 @@ import styled from "styled-components";
 export default function Total({registries}){
     
     const nums = registries.map((r)=> Number(r.value))
-    console.log(nums)
     const total = nums.reduce((total, nums) => total + nums, 0);
 
     return(
