@@ -3,12 +3,16 @@ import { backgroundColor } from "../../Constants/Colors";
 
 export const StyleScreen = styled.div`
     box-sizing: border-box;
+    padding: 24px 24px 20px 24px;
+    gap: 25px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    
+
+
 
     background-color: ${backgroundColor};
     color: #FFFFFF;
@@ -20,6 +24,14 @@ export const StyleScreen = styled.div`
         font-size: 32px;
         line-height: 50px;
     }
+
+    h2{
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+    font-size: 26px;
+    }
+
 
     a{
         margin-top: 25px;
