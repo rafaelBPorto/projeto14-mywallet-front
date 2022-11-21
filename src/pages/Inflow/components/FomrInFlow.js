@@ -2,24 +2,32 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StyledForm from "../../../assets/styles/StyleForm";
 import dayjs from "dayjs";
+import axios from "axios";
+import { BASEURL } from "../../../Constants/URLS";
+
 
 export default function FormInflow() {
-    const [value, setValue] = useState();
-    const [descripiton, setDescriprion] = useState();
+    const [value, setValue] = useState("");
+    const [descripton, setDescriprion] = useState("");
 
     const navigate = useNavigate();
 
     async function handleForm(e) {
         e.preventDefault();
+
         try {
-            const res = await axios.post(`${BASEURL}/postings`, "token", {
-                
+            const res = await axios.post(`${BASEURL}/registries`, {
+                value,
+                description: descripton,
+                type: "inflow",
+                date: dayjs().format("DD/MM/YYYY")
             });
-            navigate("/inflow")
+            navigate("/home")
 
 
         } catch (error) {
-            alert("Não foi possível adicionar esta entrada")
+            console.log(error)
+            alert("Não foi possível adicionar este lançamento")
         }
 
     }
@@ -38,7 +46,7 @@ export default function FormInflow() {
             <input
                 type="text"
                 name="descripiton"
-                value={descripiton}
+                value={descripton}
                 placeholder="Descrição"
                 onChange={(e) => setDescriprion(e.target.value)}
                 required

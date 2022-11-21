@@ -9,13 +9,15 @@ const StyleSubmitPost = styled.div`
     display:flex;
     justify-content:space-between;
 
-    button{
+    a{
+        display:flex;
+        justify-content:center;
+        align-items:center;
         background: ${colorButton};
         width:50%;
         height: 80vh;
         max-width:156px;
         max-height:114px;
-        border: none;
 
         font-family: 'Raleway';
         font-style: normal;
