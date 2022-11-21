@@ -4,7 +4,7 @@ import { backgroundColor } from "../../Constants/Colors";
 export const StyleScreen = styled.div`
     box-sizing: border-box;
     padding: 24px 24px 20px 24px;
-    gap: 25px;
+    /* gap: 25px; */
     height: 100vh;
     display: flex;
     flex-direction: column;

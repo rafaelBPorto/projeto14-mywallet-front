@@ -13,8 +13,7 @@ const StyleRegistries = styled.div`
     margin-top: 72px;
     gap:5px;
 
-    overflow-y: scroll
-
+    overflow-y: scroll;
 
 `
 export default StyleRegistries;

@@ -4,6 +4,7 @@ import { BASEURL } from "../../../../Constants/URLS"
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import styled from "styled-components";
+import Total from "./Total.js";
 
 export default function Registries() {
     const [registries, setRegistries] = useState();
@@ -28,10 +29,8 @@ export default function Registries() {
         return <StyleRegistries><h2>Não há registros de entrada ou saída</h2></StyleRegistries>
     }
 
-    function formatDate(date) {
-        return "recebidp"
-    }
     return (
+        <>
         <StyleRegistries>
             {registries.map((r, index) =>
                 <Extract key={index}>
@@ -39,16 +38,17 @@ export default function Registries() {
                     <StyleType type={r.type==="outflow"? "#C70000" : "#03AC00"}>{Math.abs(r.value)}</StyleType>
                 </Extract>
             )
-            }
+        }
         </StyleRegistries >
+        <Total registries={registries}/>
+        </>
     )
 }
 
 const Extract = styled.div`
- display: flex;
+    display: flex;
     justify-content: space-between;
 
-    
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
